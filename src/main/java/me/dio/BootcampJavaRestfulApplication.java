@@ -1,5 +1,7 @@
 package me.dio;
 
+
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -7,7 +9,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class BootcampJavaRestfulApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BootcampJavaRestfulApplication.class, args);
-	}
-
+		SpringApplication app = new SpringApplication(BootcampJavaRestfulApplication.class);
+        //Adição do perfil "dev" para execução correta do código.
+        app.setAdditionalProfiles("dev");
+        app.run(args);    
+    }
 }
+
+
